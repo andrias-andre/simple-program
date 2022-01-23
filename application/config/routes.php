@@ -49,6 +49,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'welcome';
-$route['404_override'] = '';
+$route['default_controller']   = 'home';
+$route['dashboard']            = 'dashboard';
+$route['product']              = 'dashboard/product';
+$route['company']              = 'dashboard/company';
+$route['report_product']        = 'dashboard/reportproduct';
+$route['report_company']        = 'dashboard/reportcompany';
+$route['report_transaction']    = 'dashboard/reporttransaction';
+$route['transaction']          = 'dashboard/transaction';
+$route['404_override']         = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['login']['POST']          = 'home/login';
+$route['product/show']['GET']    = 'product/show';
+$route['product/save']['POST']   = 'product/save';
+$route['product/edit']['POST']   = 'product/edit';
+$route['product/delete']['POST'] = 'product/delete';
+
+$route['product/price']['POST']      = 'product/price';
+$route['transaction/docno']['POST']  = 'transaction/getLastDocNo';
+
+$route['company/show']['GET']    = 'company/show';
+$route['company/save']['POST']   = 'company/save';
+$route['company/edit']['POST']   = 'company/edit';
+$route['company/delete']['POST'] = 'company/delete';
+
+
+$route['transaction/show']['GET']    = 'transaction/show';
+$route['transaction/save']['POST']   = 'transaction/save';
+$route['transaction/edit']['POST']   = 'transaction/edit';
+$route['transaction/delete']['POST'] = 'transaction/delete';
+$route['transactionday']['POST']     = 'transaction/day';
+
